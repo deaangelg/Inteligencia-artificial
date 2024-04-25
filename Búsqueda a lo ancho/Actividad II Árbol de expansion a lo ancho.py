@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon March 4 00:20:15 2024
-
+Este script implementa el algoritmo de búsqueda en anchura (BFS) para encontrar
+el camino más corto entre dos nodos en un grafo no ponderado.
 @author: Dea 
 
 """
@@ -17,6 +18,17 @@ ni = input("Nodo fuente: ")
 nf = input("Nodo destino: ")
 
 def ancho(grafo, ni, nf):
+  """
+    Implementación del algoritmo de búsqueda en anchura (BFS).
+
+    Args:
+        grafo (dict): Diccionario que representa el grafo.
+        ni (str): Nodo fuente.
+        nf (str): Nodo destino.
+
+    Returns:
+        list or str: Lista de aristas que forman el camino más corto entre ni y nf o "error" si no existe un camino.
+    """
     visitados = set()
     padres = {}
     cola = deque([ni])
